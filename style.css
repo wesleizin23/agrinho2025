@@ -3,14 +3,14 @@
     display: none;
 }
 
-
-#mostrar-conteudo:checked ~ #problemas,
-#mostrar-conteudo:checked ~ #consequencias,
-#mostrar-conteudo:checked ~ #conclusao {
+/* Quando o checkbox for marcado, as seções são exibidas */
+#mostrar-conteudo:checked ~ #primeira-secao ~ #problemas,
+#mostrar-conteudo:checked ~ #primeira-secao ~ #consequencias,
+#mostrar-conteudo:checked ~ #primeira-secao ~ #conclusao {
     display: block;
 }
 
-
+/* Estiliza o link que ativa as seções */
 label[for="mostrar-conteudo"] {
     cursor: pointer;
     font-size: 18px;
@@ -18,7 +18,7 @@ label[for="mostrar-conteudo"] {
     text-decoration: underline;
 }
 
-
+/* Estilo das seções */
 section {
     margin-top: 30px;
     padding: 15px;
@@ -31,4 +31,35 @@ footer {
     text-align: center;
     margin-top: 40px;
     font-size: 14px;
+}
+
+/* Estilo básico para o rodapé */
+footer p {
+    color: #666;
+}
+
+/* Estilos para o botão de chamada para ação */
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o link do LinkedIn */
+.cta-footer {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.cta-footer:hover {
+    color: #007bff;
 }
