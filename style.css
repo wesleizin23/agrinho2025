@@ -1,145 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Rakkas&display=swap&#39');
-
-
-:root {
---primary-color: #026773;
---secondary-color: #3CA6A6;
---text-color: #024959;
---background-color: #F2E3D5;
---button-hover: #012E40;
---font-body: "Chocolate Classical Sans", serif;
---font-titulo: "Rakkas", serif;
+/* Esconde as seções inicialmente */
+#problemas, #consequencias, #conclusao {
+    display: none;
 }
 
 
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: var(--font-body);
-}
-
-body {
-background-color: var(--background-color);
-color: var(--text-color);
-line-height: 1.6;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-padding: 20px;
+#mostrar-conteudo:checked ~ #problemas,
+#mostrar-conteudo:checked ~ #consequencias,
+#mostrar-conteudo:checked ~ #conclusao {
+    display: block;
 }
 
 
-h1, h2, h3 {
-font-family: var(--font-titulo);
-}
-
-h3 {
-margin-top: 25px;
-}
-
-
-p, ul {
-margin-top: 20px;
+label[for="mostrar-conteudo"] {
+    cursor: pointer;
+    font-size: 18px;
+    color: blue;
+    text-decoration: underline;
 }
 
 
-img {
-max-width: 90%;
-height: auto;
-border-radius: 8px;
-margin: 15px 0;
+section {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
 }
 
-
-header {
-width: 100%;
-max-width: 800px;
-text-align: center;
-margin-bottom: 20px;
-padding: 20px;
-background-color: #ffffff;
-border-radius: 8px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-
-nav ul {
-list-style: none;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-gap: 15px;
-margin-top: 15px;
-padding-left: 0;
-}
-
-nav a {
-text-decoration: none;
-color: var(--primary-color);
-font-weight: bold;
-}
-
-nav a:hover {
-color: var(--button-hover);
-text-decoration: underline;
-}
-
-main {
-max-width: 800px;
-width: 100%;
-}
-
-
-.conteudo {
-background-color: white;
-padding: 20px;
-margin: 20px 0;
-border-radius: 8px;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-text-align: left;
-}
-
-
-.cta-button {
-display: inline-block;
-margin-top: 20px;
-padding: 10px 15px;
-background-color: var(--primary-color);
-color: white;
-text-decoration: none;
-border-radius: 5px;
-transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-background-color: var(--button-hover);
-}
-
-
+/* Adicionando espaçamento no rodapé */
 footer {
-text-align: center;
-padding: 20px;
-color: var(--text-color);
-}
-
-
-@media screen and (max-width: 768px) {
-body {
-font-size: 14px;
-}
-
-main, .conteudo, section, article, ul, p, h2, h3 {
-text-align: center;
-}
-
-nav ul {
-flex-direction: column;
-align-items: center;
-}
-
-iframe, img {
-width: 100%;
-}
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
 }
