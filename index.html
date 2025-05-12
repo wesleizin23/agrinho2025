@@ -6,16 +6,19 @@
     <title>O meio ambiente ao meu redor</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Esconde as seções inicialmente */
         #problemas, #consequencias, #conclusao {
             display: none;
         }
 
+        /* Exibe as seções quando o checkbox for marcado */
         #mostrar-conteudo:checked ~ #problemas,
         #mostrar-conteudo:checked ~ #consequencias,
         #mostrar-conteudo:checked ~ #conclusao {
             display: block;
         }
 
+        /* Estiliza o link de mostrar conteúdo */
         label[for="mostrar-conteudo"] {
             cursor: pointer;
             font-size: 18px;
@@ -23,11 +26,62 @@
             text-decoration: underline;
         }
 
+        /* Estilo básico para as seções */
         section {
             margin-top: 30px;
             padding: 15px;
             background-color: #f0f0f0;
             border-radius: 8px;
+        }
+
+        /* Estilos para as listas de consequências */
+        #consequencias ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        #consequencias li {
+            margin-bottom: 8px;
+        }
+
+        /* Estilo para os artigos dentro das seções */
+        article {
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para o botão de link */
+        .cta-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+            border-top: 1px solid #ddd;
+        }
+
+        .cta-footer {
+            color: #fff;
+            font-size: 18px;
+            text-decoration: underline;
+        }
+
+        .cta-footer:hover {
+            color: #007bff;
         }
     </style>
 </head>
